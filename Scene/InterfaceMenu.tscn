@@ -1,0 +1,96 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Sprites/Background.jpg" type="Texture" id=1]
+[ext_resource path="res://Fontes/Ngombe.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Fontes/NgombeMenu.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Scripts/iniciar.gd" type="Script" id=4]
+[ext_resource path="res://Scripts/quit.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/Pacal2.png" type="Texture" id=6]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CenterContainer"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="CenterContainer/ParallaxBackground"]
+
+[node name="Sprite" type="Sprite" parent="CenterContainer/ParallaxBackground/ParallaxLayer"]
+scale = Vector2( 1.63792, 1.43698 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 111.0
+margin_top = 16.0
+margin_right = 912.0
+margin_bottom = 583.0
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_right = 801.0
+margin_bottom = 83.0
+rect_clip_content = true
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "MAYAN CIVILIZATION"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 87.0
+margin_right = 801.0
+margin_bottom = 567.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_right = 222.0
+margin_bottom = 480.0
+alignment = 1
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+material = SubResource( 1 )
+margin_top = 138.0
+margin_right = 222.0
+margin_bottom = 186.0
+custom_fonts/font = ExtResource( 3 )
+text = "NOVO JOGO"
+script = ExtResource( 4 )
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+margin_top = 190.0
+margin_right = 222.0
+margin_bottom = 238.0
+custom_fonts/font = ExtResource( 3 )
+text = "CARREGAR"
+
+[node name="Button3" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+modulate = Color( 0.957031, 0.957031, 0.957031, 1 )
+margin_top = 242.0
+margin_right = 222.0
+margin_bottom = 290.0
+custom_fonts/font = ExtResource( 3 )
+text = "OPÇÕES"
+
+[node name="Button4" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer2/VBoxContainer"]
+modulate = Color( 0.957031, 0.957031, 0.957031, 1 )
+margin_top = 294.0
+margin_right = 222.0
+margin_bottom = 342.0
+custom_fonts/font = ExtResource( 3 )
+text = "SAIR"
+script = ExtResource( 5 )
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/VBoxContainer/HBoxContainer2"]
+margin_left = 226.0
+margin_right = 600.0
+margin_bottom = 480.0
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer/HBoxContainer2/VBoxContainer2"]
+margin_right = 374.0
+margin_bottom = 480.0
+texture = ExtResource( 6 )
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Button" to="CenterContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Button" method="_on_play_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Button4" to="CenterContainer/VBoxContainer/HBoxContainer2/VBoxContainer/Button4" method="_on_quit_pressed"]
