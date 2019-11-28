@@ -1,5 +1,6 @@
 extends Node2D
 
+signal planta_collected
 onready var TIMER = $Timer
 onready var PROGRESS_BAR = $ProgressBar
 onready var ANIM_SPRITE = $AnimatedSprite
@@ -80,4 +81,5 @@ func _on_Timer_timeout():
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.get_button_index() == 2:
+		emit_signal("planta_collected")
 		queue_free()

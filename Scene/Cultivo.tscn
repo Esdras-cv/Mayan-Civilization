@@ -15,8 +15,10 @@ script = ExtResource( 1 )
 [node name="Gui" parent="." instance=ExtResource( 2 )]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+editor/display_folded = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+editor/display_folded = true
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 510, 300 )
@@ -26,13 +28,13 @@ texture = ExtResource( 3 )
 editor/display_folded = true
 
 [node name="Area2D" parent="Buracos" instance=ExtResource( 4 )]
-position = Vector2( 308.666, 113.131 )
+position = Vector2( 398.475, 110.798 )
 
 [node name="Area2D6" parent="Buracos" instance=ExtResource( 4 )]
-position = Vector2( 469.54, 110.877 )
+position = Vector2( 534.856, 109.711 )
 
 [node name="Area2D5" parent="Buracos" instance=ExtResource( 4 )]
-position = Vector2( 621.521, 112.433 )
+position = Vector2( 675.173, 110.1 )
 
 [node name="Area2D4" parent="Buracos" instance=ExtResource( 4 )]
 position = Vector2( 806.581, 111.734 )

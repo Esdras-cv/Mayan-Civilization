@@ -1,31 +1,31 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/Planta2.gd" type="Script" id=1]
-[ext_resource path="res://sprites/plantas/Planta2/plant03.png" type="Texture" id=2]
-[ext_resource path="res://sprites/plantas/Planta2/plant02.png" type="Texture" id=3]
-[ext_resource path="res://sprites/plantas/Planta2/plant04.png" type="Texture" id=4]
-[ext_resource path="res://sprites/plantas/Planta2/plant01.png" type="Texture" id=5]
+[ext_resource path="res://sprites/plantas/Planta2/plant04.png" type="Texture" id=2]
+[ext_resource path="res://sprites/plantas/Planta2/plant01.png" type="Texture" id=3]
+[ext_resource path="res://sprites/plantas/Planta2/plant03.png" type="Texture" id=4]
+[ext_resource path="res://sprites/plantas/Planta2/plant02.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": false,
-"name": "stage2",
+"name": "stage3",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": false,
-"name": "stage1",
+"name": "stage0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": false,
-"name": "stage3",
+"name": "stage2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ) ],
 "loop": false,
-"name": "stage0",
+"name": "stage1",
 "speed": 5.0
 } ]
 

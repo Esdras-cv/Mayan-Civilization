@@ -1,12 +1,17 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Scripts/Hud.gd" type="Script" id=1]
 [ext_resource path="res://Fontes/NgombeHud.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Sprites/plantas/plant10.png" type="Texture" id=3]
-[ext_resource path="res://Sprites/Pimentão.png" type="Texture" id=4]
-[ext_resource path="res://Sprites/Tomate.png" type="Texture" id=5]
-[ext_resource path="res://Sprites/Beringela.png" type="Texture" id=6]
-[ext_resource path="res://Sprites/Milho.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Hortaliça.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/HortaliçaSeta.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/Pimentão.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/PimentãoSeta.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Tomate.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/TomateSeta.png" type="Texture" id=8]
+[ext_resource path="res://Sprites/Beringela.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/BeringelaSeta.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Milho.png" type="Texture" id=11]
+[ext_resource path="res://Sprites/MilhoSeta.png" type="Texture" id=12]
 
 [node name="Gui" type="Control"]
 anchor_right = 1.0
@@ -23,48 +28,71 @@ margin_bottom = 65.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer"]
 margin_right = 984.0
-margin_bottom = 24.0
+margin_bottom = 32.0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/HBoxContainer"]
-margin_right = 228.0
-margin_bottom = 24.0
+margin_right = 285.0
+margin_bottom = 32.0
 
 [node name="Label" type="Label" parent="HBoxContainer/HBoxContainer/HBoxContainer"]
-margin_top = 1.0
+margin_top = 5.0
 margin_right = 105.0
-margin_bottom = 22.0
+margin_bottom = 26.0
 custom_fonts/font = ExtResource( 2 )
 text = "SEMENTES"
 
 [node name="TextureButton" type="TextureButton" parent="HBoxContainer/HBoxContainer/HBoxContainer"]
 margin_left = 109.0
-margin_right = 133.0
-margin_bottom = 24.0
+margin_right = 141.0
+margin_bottom = 32.0
 texture_normal = ExtResource( 3 )
+texture_focused = ExtResource( 4 )
 
 [node name="TextureButton2" type="TextureButton" parent="HBoxContainer/HBoxContainer/HBoxContainer"]
-margin_left = 137.0
-margin_right = 154.0
-margin_bottom = 24.0
-texture_normal = ExtResource( 4 )
+margin_left = 145.0
+margin_right = 177.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 5 )
+texture_focused = ExtResource( 6 )
 
 [node name="TextureButton3" type="TextureButton" parent="HBoxContainer/HBoxContainer/HBoxContainer"]
-margin_left = 158.0
-margin_right = 179.0
-margin_bottom = 24.0
-texture_normal = ExtResource( 5 )
+margin_left = 181.0
+margin_right = 213.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 7 )
+texture_focused = ExtResource( 8 )
 
 [node name="TextureButton4" type="TextureButton" parent="HBoxContainer/HBoxContainer/HBoxContainer"]
-margin_left = 183.0
-margin_right = 202.0
-margin_bottom = 24.0
-texture_normal = ExtResource( 6 )
+margin_left = 217.0
+margin_right = 249.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 9 )
+texture_focused = ExtResource( 10 )
 
 [node name="TextureButton5" type="TextureButton" parent="HBoxContainer/HBoxContainer/HBoxContainer"]
-margin_left = 206.0
-margin_right = 228.0
-margin_bottom = 24.0
-texture_normal = ExtResource( 7 )
+margin_left = 253.0
+margin_right = 285.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 11 )
+texture_focused = ExtResource( 12 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="HBoxContainer"]
+margin_top = 36.0
+margin_right = 984.0
+margin_bottom = 57.0
+
+[node name="Label" type="Label" parent="HBoxContainer/HBoxContainer2"]
+margin_right = 175.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 2 )
+text = "ITENS COLETADOS:"
+
+[node name="Label2" type="Label" parent="HBoxContainer/HBoxContainer2"]
+margin_left = 179.0
+margin_right = 192.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 2 )
+text = "0"
 [connection signal="pressed" from="HBoxContainer/HBoxContainer/HBoxContainer/TextureButton" to="." method="_on_TextureButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/HBoxContainer/HBoxContainer/TextureButton2" to="." method="_on_TextureButton2_pressed"]
 [connection signal="pressed" from="HBoxContainer/HBoxContainer/HBoxContainer/TextureButton3" to="." method="_on_TextureButton3_pressed"]
