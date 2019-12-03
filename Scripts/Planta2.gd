@@ -1,6 +1,8 @@
 extends Node2D
 
 signal planta_collected
+signal planta_desenvolvida
+
 onready var TIMER = $Timer
 onready var PROGRESS_BAR = $ProgressBar
 onready var ANIM_SPRITE = $AnimatedSprite
@@ -78,6 +80,7 @@ func _physics_process(delta):
 func _on_Timer_timeout():
 	PROGRESS_BAR.visible = false
 	desenvolvida = true
+	#emit_signal("planta_desenvolvida")
 
 func _on_Area2D_input_event(viewport, event, shape_idx):
 	if event is InputEventMouseButton and event.get_button_index() == 2:

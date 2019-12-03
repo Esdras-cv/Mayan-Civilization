@@ -67,10 +67,9 @@ position = Vector2( 591.495, 446.389 )
 position = Vector2( 882.995, 445.439 )
 
 [node name="Arvores" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Sprite" type="Sprite" parent="Arvores"]
-position = Vector2( 147, 160 )
+position = Vector2( 151.411, 180.583 )
 texture = ExtResource( 5 )
 
 [node name="Sprite2" type="Sprite" parent="Arvores"]

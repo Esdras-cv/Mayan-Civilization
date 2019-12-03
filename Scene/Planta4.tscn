@@ -1,31 +1,31 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/Planta2.gd" type="Script" id=1]
-[ext_resource path="res://sprites/plantas/Planta4/plant04.png" type="Texture" id=2]
-[ext_resource path="res://sprites/plantas/Planta4/plant01.png" type="Texture" id=3]
-[ext_resource path="res://sprites/plantas/Planta4/plant03.png" type="Texture" id=4]
-[ext_resource path="res://sprites/plantas/Planta4/plant02.png" type="Texture" id=5]
+[ext_resource path="res://sprites/plantas/Planta4/plant03.png" type="Texture" id=2]
+[ext_resource path="res://sprites/plantas/Planta4/plant02.png" type="Texture" id=3]
+[ext_resource path="res://sprites/plantas/Planta4/plant04.png" type="Texture" id=4]
+[ext_resource path="res://sprites/plantas/Planta4/plant01.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ) ],
 "loop": false,
-"name": "stage3",
+"name": "stage2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 3 ) ],
 "loop": false,
-"name": "stage0",
+"name": "stage1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 4 ) ],
 "loop": false,
-"name": "stage2",
+"name": "stage3",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ) ],
 "loop": false,
-"name": "stage1",
+"name": "stage0",
 "speed": 5.0
 } ]
 
@@ -63,14 +63,14 @@ wait_time = 20.0
 one_shot = true
 autostart = true
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Planta4" type="Area2D" parent="."]
 position = Vector2( -3.8147e-006, 0.748417 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Planta4"]
 position = Vector2( -0.735088, -2.97728 )
 shape = SubResource( 4 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="input_event" from="Area2D" to="." method="_on_Area2D_input_event"]
+[connection signal="input_event" from="Planta4" to="." method="_on_Area2D_input_event"]
