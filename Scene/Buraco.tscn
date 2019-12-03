@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scripts/Buraco.gd" type="Script" id=1]
 [ext_resource path="res://Sprites/Buraco.png" type="Texture" id=2]
+[ext_resource path="res://Fontes/Ngombe.tres" type="DynamicFont" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 19.5282
@@ -18,4 +19,13 @@ texture = ExtResource( 2 )
 ]]
 position = Vector2( -0.681122, 0 )
 shape = SubResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 25.0872
+margin_top = 18.4853
+margin_right = 65.0872
+margin_bottom = 32.4853
+custom_fonts/font = ExtResource( 3 )
+[connection signal="area_entered" from="." to="." method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_Area2D_area_exited"]
 [connection signal="input_event" from="." to="." method="_on_Area2D_input_event"]

@@ -19,6 +19,10 @@ config/name="Mayan Civilization"
 run/main_scene="res://Scene/InterfaceMenu.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Scene/Global.tscn"
+
 [display]
 
 window/stretch/mode="viewport"
